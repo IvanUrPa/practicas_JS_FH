@@ -22,3 +22,7 @@ let people = new Persona()
 
 console.log(people)
 console.log(people.imprimirInfo())
+
+let a = 1
+let b = a.esPositivo()
+console.log(b)

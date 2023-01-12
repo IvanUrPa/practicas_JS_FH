@@ -32,5 +32,9 @@ function Jugador(nombre) {
 let gandalf = new Jugador("Gandalf")
 let legolas = new Jugador("Legolas")
 
-console.log(gandalf)
-console.log(legolas)
+// console.log(gandalf)
+// console.log(legolas)
+
+// * Usando los metodos creados
+// gandalf.curar(legolas)
+// gandalf.tirarFlecha(legolas)
