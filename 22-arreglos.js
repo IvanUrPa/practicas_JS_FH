@@ -6,7 +6,7 @@ console.log(arr)
 console.log(arr[0], arr[4])
 
 /*funciones para arreglos*/
-// funcion revrese
+// funcion reverse
 arr.reverse()
 console.log(arr)
 
@@ -39,6 +39,24 @@ console.log(arr)
 arr.push("6")
 console.log(arr)
 
-// introduce elemento al inicio del arreglo
+//introduce elemento al inicio del arreglo
+arr.unshift("0")
+console.log(arr)
 
+//representación textual del arreglo
+console.log(arr.toString())
 
+//eliminar el ultimo elemento del arreglo
+let elimine = arr.pop()
+console.log(arr, elimine)
+
+//splice (posición a apuntar, elementos a eliminar, meter elemento a esa posición)
+arr.splice(1,2,"10","20","30")
+console.log(arr)
+
+arr.splice(1,0,"10","20","30")
+console.log(arr)
+
+//(primer posición del arreglo a cortar, segunda posición del arreglo a cortar)
+arr = arr.slice(1,3)
+console.log(arr)
