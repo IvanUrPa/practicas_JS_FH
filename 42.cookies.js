@@ -20,12 +20,32 @@ function borrarCookie(nombre){
     document.cookie = nombre+"=x;expires="+hoy.toUTCString()+";";
 }
 
-// crearCookie("nombre", "Fernando")
-// crearCookie("correo", "fernando@gmail.com")
-// crearCookie("direccion", "San Francisoc Costa Rica")
+function getCookie(nombre){
+    let cookies = document.cookie;
 
-borrarCookie("nombre")
+    let cookieArr = cookies.split("; ")
+    console.log(cookieArr)
 
-let cookies = document.cookie;
+    for (let i=0; i <cookieArr.length; i++){
+        let parArr = cookieArr[i].split("=")
+        cookieArr[i] = parArr
 
-console.log(cookies)
+        if (parArr[0]===nombre) {
+            return decodeURI(parArr[1])
+        }
+    }
+
+    //console.log(cookieArr)
+    return undefined;
+}
+
+console.log(getCookie("direccion"))
+
+crearCookie("nombre", "Fernando")
+crearCookie("correo", "fernando@gmail.com")
+crearCookie("direccion", "San Francisoc Costa Rica")
+
+// borrarCookie("nombre")
+
+
+// console.log(cookies)
